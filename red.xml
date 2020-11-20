@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<projectConfiguration>
+    <configVersion>2</configVersion>
+    <relativeTo>WORKSPACE</relativeTo>
+    <referencedLibrary type="PYTHON" name="Selenium2Library" path="C:/Users/sstuparu/env/Lib/site-packages/Selenium2Library" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="classes" path="C:/Users/sstuparu/eclipse-workspace/robot-fwk-tutorial/classes.py" dynamic="false"/>
+    <referencedLibrary type="PYTHON" name="ApiLibrary" path="robot-fwk-tutorial/ApiLibrary.py" dynamic="false"/>
+    <pythonpath>
+
+        <path location="C:/Users/sstuparu/eclipse-workspace/robot-fwk-tutorial"/>
+
+    </pythonpath>
+    <pythonpath/>
+    <classpath/>
+    <excludedForValidation/>
+    <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
+    <validatedFileMaxSize>1024</validatedFileMaxSize>
+</projectConfiguration>

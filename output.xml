@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201120 14:48:22.616" rpa="false">
+<suite id="s1" name="Robot-Fwk-Tutorial" source="C:\Users\sstuparu\eclipse-workspace\robot-fwk-tutorial">
+<suite id="s1-s1" name="Testcases" source="C:\Users\sstuparu\eclipse-workspace\robot-fwk-tutorial\testcases.robot">
+<test id="s1-s1-t1" name="Verify latest python release">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Create Driver</arg>
+<arg>AND</arg>
+<arg>Get To Web Address</arg>
+</arguments>
+<kw name="Create Driver" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:22.828" endtime="20201120 14:48:25.938"></status>
+</kw>
+<kw name="Get To Web Address" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:25.939" endtime="20201120 14:48:26.639"></status>
+</kw>
+<status status="PASS" starttime="20201120 14:48:22.828" endtime="20201120 14:48:26.639"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>3.9</arg>
+</arguments>
+<assign>
+<var>${my_python_release}</var>
+</assign>
+<msg timestamp="20201120 14:48:26.639" level="INFO">${my_python_release} = 3.9</msg>
+<status status="PASS" starttime="20201120 14:48:26.639" endtime="20201120 14:48:26.639"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>3.9</arg>
+<arg>bugfix</arg>
+<arg>2020-10-05</arg>
+<arg>2025-10</arg>
+<arg>PEP 596</arg>
+</arguments>
+<assign>
+<var>@{row1}</var>
+</assign>
+<msg timestamp="20201120 14:48:26.640" level="INFO">@{row1} = [ 3.9 | bugfix | 2020-10-05 | 2025-10 | PEP 596 ]</msg>
+<status status="PASS" starttime="20201120 14:48:26.640" endtime="20201120 14:48:26.640"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>3.8</arg>
+<arg>bugfix</arg>
+<arg>2019-10-14</arg>
+<arg>2024-10</arg>
+<arg>PEP 569</arg>
+</arguments>
+<assign>
+<var>@{row2}</var>
+</assign>
+<msg timestamp="20201120 14:48:26.640" level="INFO">@{row2} = [ 3.8 | bugfix | 2019-10-14 | 2024-10 | PEP 569 ]</msg>
+<status status="PASS" starttime="20201120 14:48:26.640" endtime="20201120 14:48:26.640"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>3.7</arg>
+<arg>security</arg>
+<arg>2018-06-27</arg>
+<arg>2023-06-27</arg>
+<arg>PEP 537</arg>
+</arguments>
+<assign>
+<var>@{row3}</var>
+</assign>
+<msg timestamp="20201120 14:48:26.641" level="INFO">@{row3} = [ 3.7 | security | 2018-06-27 | 2023-06-27 | PEP 537 ]</msg>
+<status status="PASS" starttime="20201120 14:48:26.641" endtime="20201120 14:48:26.641"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>3.6</arg>
+<arg>security</arg>
+<arg>2016-12-23</arg>
+<arg>2021-12-23</arg>
+<arg>PEP 494</arg>
+</arguments>
+<assign>
+<var>@{row4}</var>
+</assign>
+<msg timestamp="20201120 14:48:26.642" level="INFO">@{row4} = [ 3.6 | security | 2016-12-23 | 2021-12-23 | PEP 494 ]</msg>
+<status status="PASS" starttime="20201120 14:48:26.641" endtime="20201120 14:48:26.642"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>2.7</arg>
+<arg>end-of-life</arg>
+<arg>2010-07-03</arg>
+<arg>2020-01-01</arg>
+<arg>PEP 373</arg>
+</arguments>
+<assign>
+<var>@{row5}</var>
+</assign>
+<msg timestamp="20201120 14:48:26.642" level="INFO">@{row5} = [ 2.7 | end-of-life | 2010-07-03 | 2020-01-01 | PEP 373 ]</msg>
+<status status="PASS" starttime="20201120 14:48:26.642" endtime="20201120 14:48:26.642"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>${row1}</arg>
+<arg>${row2}</arg>
+<arg>${row3}</arg>
+<arg>${row4}</arg>
+<arg>${row5}</arg>
+</arguments>
+<assign>
+<var>@{my_list}</var>
+</assign>
+<msg timestamp="20201120 14:48:26.643" level="INFO">@{my_list} = [ ['3.9', 'bugfix', '2020-10-05', '2025-10', 'PEP 596'] | ['3.8', 'bugfix', '2019-10-14', '2024-10', 'PEP 569'] | ['3.7', 'security', '2018-06-27', '2023-06-27', 'PEP 537'] | ['3.6', 'security', '2016...</msg>
+<status status="PASS" starttime="20201120 14:48:26.643" endtime="20201120 14:48:26.643"></status>
+</kw>
+<kw name="Select Base Page Tab And Click Subtab" library="ApiLibrary">
+<arguments>
+<arg>downloads</arg>
+<arg>All releases</arg>
+</arguments>
+<status status="PASS" starttime="20201120 14:48:26.643" endtime="20201120 14:48:27.638"></status>
+</kw>
+<kw name="Scrape Webpage For Table" library="ApiLibrary">
+<doc>This method extracts desired table from a page</doc>
+<arguments>
+<arg>Python version</arg>
+</arguments>
+<assign>
+<var>&amp;{releases}</var>
+</assign>
+<msg timestamp="20201120 14:48:28.213" level="INFO">&amp;{releases} = { header=['Python version', 'Maintenance status', 'First released', 'End of support', 'Release schedule'] | content=[['3.9', 'bugfix', '2020-10-05', '2025-10', 'PEP 596'], ['3.8', 'bugfix', '2019-10-1...</msg>
+<status status="PASS" starttime="20201120 14:48:27.638" endtime="20201120 14:48:28.213"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${releases}[content][0][0]</arg>
+</arguments>
+<assign>
+<var>${newest_python_release}</var>
+</assign>
+<msg timestamp="20201120 14:48:28.214" level="INFO">${newest_python_release} = 3.9</msg>
+<status status="PASS" starttime="20201120 14:48:28.213" endtime="20201120 14:48:28.214"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${my_python_release}</arg>
+<arg>${newest_python_release}</arg>
+<arg>Python releases aren't the same</arg>
+</arguments>
+<status status="PASS" starttime="20201120 14:48:28.214" endtime="20201120 14:48:28.214"></status>
+</kw>
+<kw name="Compare Available Releases" library="ApiLibrary">
+<arguments>
+<arg>${my_list}</arg>
+<arg>${releases}[content]</arg>
+</arguments>
+<status status="PASS" starttime="20201120 14:48:28.215" endtime="20201120 14:48:28.215"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn" type="teardown">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Close Driver</arg>
+</arguments>
+<kw name="Close Driver" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:28.215" endtime="20201120 14:48:28.252"></status>
+</kw>
+<status status="PASS" starttime="20201120 14:48:28.215" endtime="20201120 14:48:28.253"></status>
+</kw>
+<doc>Steps:
+1. Go to 'Downloads' -&gt; 'All releases' page
+2. Extract the latest python release and verify it is 3.9</doc>
+<status status="PASS" starttime="20201120 14:48:22.827" endtime="20201120 14:48:28.253" critical="yes"></status>
+</test>
+<test id="s1-s1-t2" name="Verify example count is 5">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Create Driver</arg>
+<arg>AND</arg>
+<arg>Get To Web Address</arg>
+</arguments>
+<kw name="Create Driver" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:28.257" endtime="20201120 14:48:31.344"></status>
+</kw>
+<kw name="Get To Web Address" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:31.345" endtime="20201120 14:48:31.966"></status>
+</kw>
+<status status="PASS" starttime="20201120 14:48:28.256" endtime="20201120 14:48:31.967"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${5}</arg>
+</arguments>
+<assign>
+<var>${my_example_count}</var>
+</assign>
+<msg timestamp="20201120 14:48:31.967" level="INFO">${my_example_count} = 5</msg>
+<status status="PASS" starttime="20201120 14:48:31.967" endtime="20201120 14:48:31.967"></status>
+</kw>
+<kw name="Search For Keyword" library="ApiLibrary">
+<arguments>
+<arg>decorator</arg>
+</arguments>
+<status status="PASS" starttime="20201120 14:48:31.968" endtime="20201120 14:48:32.902"></status>
+</kw>
+<kw name="Click First Result" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:32.902" endtime="20201120 14:48:33.903"></status>
+</kw>
+<kw name="Click On Examples Link" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:33.903" endtime="20201120 14:48:33.977"></status>
+</kw>
+<kw name="Count Number Of Examples" library="ApiLibrary">
+<assign>
+<var>${actual_example_no}</var>
+</assign>
+<msg timestamp="20201120 14:48:34.000" level="INFO">${actual_example_no} = 5</msg>
+<status status="PASS" starttime="20201120 14:48:33.977" endtime="20201120 14:48:34.001"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${my_example_count}</arg>
+<arg>${actual_example_no}</arg>
+<arg>Example counts aren't equal</arg>
+</arguments>
+<status status="PASS" starttime="20201120 14:48:34.001" endtime="20201120 14:48:34.001"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn" type="teardown">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Close Driver</arg>
+</arguments>
+<kw name="Close Driver" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:34.002" endtime="20201120 14:48:34.040"></status>
+</kw>
+<status status="PASS" starttime="20201120 14:48:34.002" endtime="20201120 14:48:34.040"></status>
+</kw>
+<doc>Steps:
+1. Search for word 'decorator' on main page
+2. Click on first result
+3. Verify the no. of displayed examples is 5</doc>
+<status status="PASS" starttime="20201120 14:48:28.254" endtime="20201120 14:48:34.040" critical="yes"></status>
+</test>
+<test id="s1-s1-t3" name="Compare table cells">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Create Driver</arg>
+<arg>AND</arg>
+<arg>Get To Web Address</arg>
+</arguments>
+<kw name="Create Driver" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:34.044" endtime="20201120 14:48:37.112"></status>
+</kw>
+<kw name="Get To Web Address" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:37.113" endtime="20201120 14:48:39.771"></status>
+</kw>
+<status status="PASS" starttime="20201120 14:48:34.043" endtime="20201120 14:48:39.772"></status>
+</kw>
+<kw name="Select Base Page Tab And Click Subtab" library="ApiLibrary">
+<arguments>
+<arg>downloads</arg>
+<arg>All releases</arg>
+</arguments>
+<status status="PASS" starttime="20201120 14:48:39.773" endtime="20201120 14:48:40.676"></status>
+</kw>
+<kw name="Scrape Webpage For Table" library="ApiLibrary">
+<doc>This method extracts desired table from a page</doc>
+<arguments>
+<arg>Python version</arg>
+</arguments>
+<assign>
+<var>&amp;{table1}</var>
+</assign>
+<msg timestamp="20201120 14:48:41.284" level="INFO">&amp;{table1} = { header=['Python version', 'Maintenance status', 'First released', 'End of support', 'Release schedule'] | content=[['3.9', 'bugfix', '2020-10-05', '2025-10', 'PEP 596'], ['3.8', 'bugfix', '2019-10-1...</msg>
+<status status="PASS" starttime="20201120 14:48:40.677" endtime="20201120 14:48:41.284"></status>
+</kw>
+<kw name="Scrape Webpage For Table" library="ApiLibrary">
+<doc>This method extracts desired table from a page</doc>
+<arguments>
+<arg>Release version</arg>
+</arguments>
+<assign>
+<var>&amp;{table2}</var>
+</assign>
+<msg timestamp="20201120 14:48:56.864" level="INFO">&amp;{table2} = { header=['Release version', 'Release date', ' ', 'Click for more'] | content=[['Python 3.9.0', 'Oct. 5, 2020', 'Download', 'Release Notes'], ['Python 3.8.6', 'Sept. 24, 2020', 'Download', 'Release No...</msg>
+<status status="PASS" starttime="20201120 14:48:41.284" endtime="20201120 14:48:56.864"></status>
+</kw>
+<kw name="Convert Date Custom" library="ApiLibrary">
+<arguments>
+<arg>${table1}[content][0][2]</arg>
+<arg>%Y-%m-%d</arg>
+</arguments>
+<assign>
+<var>${date1}</var>
+</assign>
+<msg timestamp="20201120 14:48:56.867" level="INFO">${date1} = 2020-10-05 00:00:00</msg>
+<status status="PASS" starttime="20201120 14:48:56.864" endtime="20201120 14:48:56.867"></status>
+</kw>
+<kw name="Convert Date Custom" library="ApiLibrary">
+<arguments>
+<arg>${table2}[content][0][1]</arg>
+<arg>%b. %d, %Y</arg>
+</arguments>
+<assign>
+<var>${date2}</var>
+</assign>
+<msg timestamp="20201120 14:48:56.868" level="INFO">${date2} = 2020-10-05 00:00:00</msg>
+<status status="PASS" starttime="20201120 14:48:56.867" endtime="20201120 14:48:56.868"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${date1}</arg>
+<arg>${date2}</arg>
+</arguments>
+<status status="PASS" starttime="20201120 14:48:56.868" endtime="20201120 14:48:56.868"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn" type="teardown">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Close Driver</arg>
+</arguments>
+<kw name="Close Driver" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:56.869" endtime="20201120 14:48:56.903"></status>
+</kw>
+<status status="PASS" starttime="20201120 14:48:56.868" endtime="20201120 14:48:56.903"></status>
+</kw>
+<doc>1. Go to 'Downloads' -&gt; 'All releases' page
+2. Extract the two tables present on the page
+3. Compare the date cells from the first row of both tables and see that are similar</doc>
+<status status="PASS" starttime="20201120 14:48:34.041" endtime="20201120 14:48:56.904" critical="yes"></status>
+</test>
+<test id="s1-s1-t4" name=" Verify correspondence between tables">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Create Driver</arg>
+<arg>AND</arg>
+<arg>Get To Web Address</arg>
+</arguments>
+<kw name="Create Driver" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:48:56.910" endtime="20201120 14:49:00.029"></status>
+</kw>
+<kw name="Get To Web Address" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:49:00.030" endtime="20201120 14:49:00.704"></status>
+</kw>
+<status status="PASS" starttime="20201120 14:48:56.909" endtime="20201120 14:49:00.705"></status>
+</kw>
+<kw name="Select Base Page Tab And Click Subtab" library="ApiLibrary">
+<arguments>
+<arg>downloads</arg>
+<arg>All releases</arg>
+</arguments>
+<status status="PASS" starttime="20201120 14:49:00.705" endtime="20201120 14:49:01.895"></status>
+</kw>
+<kw name="Scrape Webpage For Table" library="ApiLibrary">
+<doc>This method extracts desired table from a page</doc>
+<arguments>
+<arg>Python version</arg>
+</arguments>
+<assign>
+<var>&amp;{table1}</var>
+</assign>
+<msg timestamp="20201120 14:49:02.597" level="INFO">&amp;{table1} = { header=['Python version', 'Maintenance status', 'First released', 'End of support', 'Release schedule'] | content=[['3.9', 'bugfix', '2020-10-05', '2025-10', 'PEP 596'], ['3.8', 'bugfix', '2019-10-1...</msg>
+<status status="PASS" starttime="20201120 14:49:01.896" endtime="20201120 14:49:02.597"></status>
+</kw>
+<kw name="Scrape Webpage For Table" library="ApiLibrary">
+<doc>This method extracts desired table from a page</doc>
+<arguments>
+<arg>Release version</arg>
+</arguments>
+<assign>
+<var>&amp;{table2}</var>
+</assign>
+<msg timestamp="20201120 14:49:17.652" level="INFO">&amp;{table2} = { header=['Release version', 'Release date', ' ', 'Click for more'] | content=[['Python 3.9.0', 'Oct. 5, 2020', 'Download', 'Release Notes'], ['Python 3.8.6', 'Sept. 24, 2020', 'Download', 'Release No...</msg>
+<status status="PASS" starttime="20201120 14:49:02.597" endtime="20201120 14:49:17.652"></status>
+</kw>
+<kw name="Validate Correspondece Between Tables Releases" library="ApiLibrary">
+<arguments>
+<arg>${table1}</arg>
+<arg>${table2}</arg>
+</arguments>
+<status status="PASS" starttime="20201120 14:49:17.652" endtime="20201120 14:49:17.653"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn" type="teardown">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Close Driver</arg>
+</arguments>
+<kw name="Close Driver" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:49:17.653" endtime="20201120 14:49:17.690"></status>
+</kw>
+<status status="PASS" starttime="20201120 14:49:17.653" endtime="20201120 14:49:17.690"></status>
+</kw>
+<doc>1. Go to 'Downloads' -&gt; 'All releases' page
+2. Extract the two tables present on the page
+3. Verify each version of Python from the first table has at least one correspondence in the second table</doc>
+<status status="PASS" starttime="20201120 14:48:56.907" endtime="20201120 14:49:17.691" critical="yes"></status>
+</test>
+<test id="s1-s1-t5" name="Click on table cells">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Create Driver</arg>
+<arg>AND</arg>
+<arg>Get To Web Address</arg>
+</arguments>
+<kw name="Create Driver" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:49:17.695" endtime="20201120 14:49:20.837"></status>
+</kw>
+<kw name="Get To Web Address" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:49:20.838" endtime="20201120 14:49:21.503"></status>
+</kw>
+<status status="PASS" starttime="20201120 14:49:17.694" endtime="20201120 14:49:21.503"></status>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<doc>Returns a list containing given items.</doc>
+<arguments>
+<arg>Python 3.9.0</arg>
+<arg>Python 3.8.6</arg>
+<arg>Python 3.5.10</arg>
+</arguments>
+<assign>
+<var>@{row_identifiers}</var>
+</assign>
+<msg timestamp="20201120 14:49:21.504" level="INFO">@{row_identifiers} = [ Python 3.9.0 | Python 3.8.6 | Python 3.5.10 ]</msg>
+<status status="PASS" starttime="20201120 14:49:21.503" endtime="20201120 14:49:21.504"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>Download</arg>
+</arguments>
+<assign>
+<var>${button_to_click}</var>
+</assign>
+<msg timestamp="20201120 14:49:21.505" level="INFO">${button_to_click} = Download</msg>
+<status status="PASS" starttime="20201120 14:49:21.504" endtime="20201120 14:49:21.505"></status>
+</kw>
+<kw name="Validate Table Clicked Links" library="ApiLibrary">
+<arguments>
+<arg>${row_identifiers}</arg>
+<arg>${button_to_click}</arg>
+</arguments>
+<status status="PASS" starttime="20201120 14:49:21.505" endtime="20201120 14:49:31.820"></status>
+</kw>
+<kw name="Run Keyword" library="BuiltIn" type="teardown">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Close Driver</arg>
+</arguments>
+<kw name="Close Driver" library="ApiLibrary">
+<status status="PASS" starttime="20201120 14:49:31.821" endtime="20201120 14:49:31.881"></status>
+</kw>
+<status status="PASS" starttime="20201120 14:49:31.821" endtime="20201120 14:49:31.881"></status>
+</kw>
+<doc>1. Go to 'Downloads' -&gt; 'All releases' page
+2. Click 'Download' button of three desired releases
+Verify the page that appears is corresponding to the release clicked</doc>
+<status status="PASS" starttime="20201120 14:49:17.692" endtime="20201120 14:49:31.882" critical="yes"></status>
+</test>
+<doc>Basic info</doc>
+<status status="PASS" starttime="20201120 14:48:22.661" endtime="20201120 14:49:31.885"></status>
+</suite>
+<status status="PASS" starttime="20201120 14:48:22.642" endtime="20201120 14:49:31.899"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" id="s1" name="Robot-Fwk-Tutorial">Robot-Fwk-Tutorial</stat>
+<stat pass="5" fail="0" id="s1-s1" name="Testcases">Robot-Fwk-Tutorial.Testcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
