@@ -4,7 +4,7 @@ Library    Selenium2Library
 Library    ApiLibrary      
 Library    DateTime
 Test Setup    Run Keywords    Create Driver    AND     Get To Web Address  
-Test Teardown    Run Keyword    Close Driver
+Test Teardown    Run Keyword If Test Failed    Close Driver    
 
 *** Test Cases ***
 Verify latest python release
